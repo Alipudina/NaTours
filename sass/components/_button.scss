@@ -75,8 +75,10 @@
     color: $color-primary;
     text-decoration: none;
     border-bottom: 1px solid $color-primary;
-    padding: 3px;
+    padding: .8rem .6rem;
+    // padding: 3px;
     transition: all .2s;
+    border-radius: 2px;
   }
 
   &:hover {
@@ -90,4 +92,12 @@
     box-shadow: 0 .5rem 1rem rgba($color-black, .15);
     transform: translateY(0);
   }
+
+  // adding hover position for touch screen divices
+  @media only screen and (max-width: 56.25em),
+      only screen and (hover: none) {
+        background-color: $color-primary;
+        color: $color-white !important;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+      }
 }
